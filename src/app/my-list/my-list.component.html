@@ -1,8 +1,12 @@
 <h1>Agrega Elementos a la lista</h1>
-<input type="text" [(ngModel)]="newElement" placeholder="Whats the new element?">
-<button (click)="addElement()">✅</button>
-<ul>
-    <li *ngFor="let element of elements; let i = index"> <!-- mapeamos el array  -->
-        {{element}} <button (click)="deleteElement(i)" >❌</button>
-    </li>
-</ul>
+<div>
+    <input type="text" [(ngModel)]="newElement" placeholder="Whats the new element?">
+    <button (click)="addElement()">✅</button>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let element of elements; let i = index"> <!-- mapeamos el array  -->
+            {{element}} <button (click)="deleteElement(i)" >❌</button>
+        </li>
+    </ul>
+</div>

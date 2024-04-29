@@ -1,0 +1,42 @@
+<h1>User Form</h1>
+<form (submit)="handelSubmit()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="user.nombre" name="nombre" />
+    </div>
+    
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" [(ngModel)]="user.apellido" name="apellido" />
+    </div>
+    
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" [(ngModel)]="user.telefono" name="telefono" />
+    </div>
+    
+    <div>
+      <label for="nacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="nacimiento" [(ngModel)]="user.nacimiento" name="nacimiento" />
+    </div>
+    
+    <button type="submit">Añadir</button>
+  </form>
+
+<div>
+    <h2>Datos del usuario</h2>
+    <table border="1">
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Fecha de Nacimiento</th>
+        </tr>
+        <tr *ngFor="let user of userList">
+          <td>{{ user.nombre }}</td>
+          <td>{{ user.apellido }}</td>
+          <td>{{ user.telefono }}</td>
+          <td>{{ user.nacimiento | date: 'dd/MM/yyyy' }}</td>
+        </tr>
+      </table>
+</div>

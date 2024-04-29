@@ -1,0 +1,94 @@
+// Variables para colores y estilos comunes
+$primary-color: #3498db; // Azul principal
+$hover-color: #2980b9; // Color al pasar el ratón
+$background-color: #ecf0f1; // Fondo del cuerpo
+$text-color: #333; // Color del texto
+$border-radius: 4px; // Bordes redondeados
+$padding: 10px; // Espacio interno
+$margin: 20px; // Espacio externo
+
+// Estilos generales para el cuerpo
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: $margin;
+}
+
+// Estilo para el título
+h1 {
+  color: $text-color;
+  text-align: center;
+}
+
+// Estilo para el formulario
+form {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin-bottom: $margin;
+}
+
+// Estilos para los elementos del formulario
+div {
+  margin-bottom: $padding;
+}
+
+label {
+  color: $text-color;
+  display: block; // Para alinear correctamente las etiquetas
+  margin-bottom: 5px; // Espacio entre etiqueta e input
+}
+
+input {
+  padding: $padding;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  width: 100%; // Ajustar al ancho del contenedor
+}
+
+button {
+  padding: $padding 15px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  // Cambiar el color de fondo al pasar el ratón
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Estilo para la tabla de datos del usuario
+table {
+  width: 100%; // Ajustar la tabla al ancho del contenedor
+  border-collapse: collapse; // Para evitar bordes dobles
+  text-align: left;
+}
+
+th, td {
+  padding: $padding;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: $primary-color;
+  color: white;
+}
+
+tr {
+  &:nth-child(even) {
+    background-color: #f2f2f2; // Fondo para filas pares
+  }
+
+  &:hover {
+    background-color: #ddd; // Cambiar color al pasar el ratón
+  }
+}
+
+h2 {
+  text-align: center;
+}

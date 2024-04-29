@@ -7,19 +7,18 @@ import { Component } from '@angular/core';
 })
 export class MyListComponent {
 
-  //creamos las variables, un array con todos los elementos de la lista y uno para el input
-  elements: string[] = [];
-  newElement: string = '';
+  //creamos las variables, el elemento que vamos a añadir y el array que guardara todos estos
+  elements: string[] = []
+  newElement: string = ''
   
+  //creamos la funcion que añade el elemento introducido en el input de la web al array
   addElement(){
-    if(this.newElement.trim() !== ''){
-      this.elements.push(this.newElement);
-      this.newElement='';
-      console.log(this.elements);
-    }
+      this.elements.push(this.newElement)
+      this.newElement=''
   }
   
+  //funcion para eliminar un elemento individual de la lista
   deleteElement(i: number){
-    this.elements.splice(i,1);
+    this.elements.splice(i,1)
   }
 }
